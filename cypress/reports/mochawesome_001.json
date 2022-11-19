@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-27T10:36:09.906Z",
+    "end": "2022-08-27T10:36:18.266Z",
+    "duration": 8360,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "99c0ac9a-192a-42aa-bbe3-658e363932fa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Affiniti_home.cy.js",
+      "file": "cypress\\e2e\\Affiniti_home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5512211b-ffd4-40e4-80e7-15e434eeb458",
+          "title": "Affiniti Home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Landing Page",
+              "fullTitle": "Affiniti Home Landing Page",
+              "timedOut": null,
+              "duration": 1487,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://178.128.19.250:8181/AFFINITI_CDB_360_WEB-V1.1.35_HOTFIX/home');",
+              "err": {},
+              "uuid": "832d9257-9eca-4749-ad8b-9d2a1759d0f9",
+              "parentUUID": "5512211b-ffd4-40e4-80e7-15e434eeb458",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login to system",
+              "fullTitle": "Affiniti Home Login to system",
+              "timedOut": null,
+              "duration": 5145,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const userName = 'admin';\nconst pwrd = 'a';\ncy.request('POST', 'http://178.128.19.250:8181/AFFINITI_CDB_360_WEB-V1.1.35_HOTFIX/login', {//userid :  'admin',\n  //password : 'a'\n});\ncy.get('[type=\"text\"]').click().type(`${userName}`);\ncy.get('.login-input.m-t-20').click().type(`${pwrd}`);\ncy.get('.btn-primary').click();",
+              "err": {},
+              "uuid": "e13cdba8-60d2-488b-abe0-a69b8d65b104",
+              "parentUUID": "5512211b-ffd4-40e4-80e7-15e434eeb458",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "832d9257-9eca-4749-ad8b-9d2a1759d0f9",
+            "e13cdba8-60d2-488b-abe0-a69b8d65b104"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6632,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

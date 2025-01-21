@@ -8,6 +8,14 @@ describe('Automation Practice Tests', () =>{
         cy.get('.fa.fa-lock').click()
         cy.get('[data-qa="signup-name"]').click().type('Rukshan')
         cy.get('[data-qa="signup-email"]').click().type('divibap269@aleitar.com')
+        cy.get('[data-qa="signup-button"]').click()
+    })
+
+    it('Update registered user profile', () => {
+        cy.contains('.title.text-center > b', 'Enter Account Information')
+        // cy.get('.title.text-center > b').should('have.text', 'Enter Account Information')
+        cy.get('#id_gender1').check()
+        cy.get('[data-qa="password"]').click().type('password')
     })
 })
 
